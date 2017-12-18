@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{811667C7-DD36-40A2-AE9C-3A5AC43F30A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BankApplication.MainApplication</RootNamespace>
+    <AssemblyName>BankApplication.MainApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciGiris.Designer.cs">
+      <DependentUpon>KullaniciGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciGiris.resx">
+      <DependentUpon>KullaniciGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BankApplication.EkHesap.Bussiness\BankApplication.EkHesapGiris.Bussiness.csproj">
+      <Project>{c3da73b7-a78a-4b9e-bfad-5dfa2c6a304e}</Project>
+      <Name>BankApplication.EkHesapGiris.Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankApplication.EkHesap.Forms\BankApplication.EkHesapGiris.Forms.csproj">
+      <Project>{ab03faf1-d516-48d4-91f6-5f4e84ade1df}</Project>
+      <Name>BankApplication.EkHesapGiris.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankApplication.Framework.BussHelper\BankApplication.Framework.BussHelper.csproj">
+      <Project>{5ee0f207-228b-476e-be48-b4ee373cba55}</Project>
+      <Name>BankApplication.Framework.BussHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankApplication.FrameWork.CommonHelper\BankApplication.FrameWork.CommonHelper.csproj">
+      <Project>{aa6153dc-d10b-4e8f-b0ff-8341f556e4b7}</Project>
+      <Name>BankApplication.FrameWork.CommonHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankApplication.Framework\BankApplication.Framework.FrmHelper.csproj">
+      <Project>{6F59DB3C-579D-4266-9A3B-A5CCD9A84C32}</Project>
+      <Name>BankApplication.Framework.FrmHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankApplication.KullaniciGirisi.Bussiness\BankApplication.KullaniciGirisi.Bussiness.csproj">
+      <Project>{771c75d0-8aa2-4116-a470-4d8073040487}</Project>
+      <Name>BankApplication.KullaniciGirisi.Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankApplication.MusteriGiris.Forms\BankApplication.MusteriGiris.Forms.csproj">
+      <Project>{34c05af0-30cf-426e-874b-c03f6056cb82}</Project>
+      <Name>BankApplication.MusteriGiris.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankApplication.ParaAktarma.Forms\BankApplication.ParaAktarma.Forms.csproj">
+      <Project>{22d3e676-5805-44d9-955f-c1880abbd017}</Project>
+      <Name>BankApplication.ParaAktarma.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Clients-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Clients-icon1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
